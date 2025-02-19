@@ -1,7 +1,6 @@
 import React from "react";
 import WorkArea from "./WorkArea";
-import { Sidebar } from "./SideBar";
-
+import { Sidebar } from "./SideContent";
 export const MainContainer = () => {
     return (
         <div className="MainContainer">
