@@ -23,6 +23,10 @@
 .workarea {
     background-color: aliceblue;
     flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
 }
 .sb-header {
     background-color: white;
@@ -53,5 +57,40 @@
     padding: 5px 10px;
     display: flex;
     flex: 1;
+    gap: 5px;
     flex-direction: column;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    /* scrollbar-width: 0; */
+}
+.sb-conversations::-webkit-scrollbar{
+    display: none;
+}
+
+.conItem{
+    background-color:cornsilk;
+    height: 60px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    display: flex;
+}
+.dp svg{
+    height: 100%;
+    width: 40px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.convDetails{
+    margin: 5px;
+    padding: 5px;
+    flex-grow: 1;
+}
+.name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color:#000000;
+}
+.lastMsg{
+font-weight: 300;
+color: #00000085;
 }

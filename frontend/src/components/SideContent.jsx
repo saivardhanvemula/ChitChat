@@ -47,6 +47,12 @@ export const Sidebar = () => {
                 <ConversationItem/>
                 <ConversationItem/>
                 <ConversationItem/>
+                <ConversationItem/>
+                <ConversationItem/>
+                <ConversationItem/>
+                <ConversationItem/>
+                <ConversationItem/>
+                <ConversationItem/>
             </div>
         </div>
     );
