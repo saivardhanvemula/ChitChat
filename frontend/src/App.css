@@ -97,3 +97,18 @@
     font-size: .75rem;
 }
 
+.chatarea-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.chatArea-header{
+    background-color: orange;
+}
+.message-container{
+    background-color: aquamarine;
+    flex: 1;
+}
+.text-input-area{
+    background-color: yellow;
+}
