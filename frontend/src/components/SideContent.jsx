@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import NightlightIcon from "@mui/icons-material/Nightlight";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
 
 import { ConversationItem } from "./ConversationItem";
 
 export const Sidebar = () => {
+    const [conversations, setconversations] = useState([
+        { name: "Test#1", lastMessage: "Last Message #1", timeStamp: "today" },
+        { name: "Test#1", lastMessage: "Last Message #1", timeStamp: "today" },
+        { name: "Test#1", lastMessage: "Last Message #1", timeStamp: "today" },
+    ]);
     return (
         <div className="sidebar">
             <div className="sb-header">
@@ -35,25 +40,17 @@ export const Sidebar = () => {
             </div>
             <div className="sb-search">
                 <IconButton>
-                <SearchIcon/>
+                    <SearchIcon />
                 </IconButton>
-                <input type="text" placeholder="Search" className="search-box"/>
+                <input
+                    type="text"
+                    placeholder="Search"
+                    className="search-box"
+                />
             </div>
-            <div className="sb-conversations">
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-                <ConversationItem/>
-            </div>
+            {conversations.map((conversation, index) => (
+                <ConversationItem key={index} props={conversation} />
+            ))}
         </div>
     );
 };

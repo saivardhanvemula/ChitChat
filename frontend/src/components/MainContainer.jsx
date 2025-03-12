@@ -1,11 +1,13 @@
 import React from "react";
-import WorkArea from "./WorkArea";
+import { ChatArea } from "./ChatArea";
+
 import { Sidebar } from "./SideContent";
 export const MainContainer = () => {
     return (
         <div className="MainContainer">
             <Sidebar />
-            <WorkArea />
+            {/* <WorkArea /> */}
+            <ChatArea/>
         </div>
     );
 };
