@@ -15,14 +15,15 @@
     display: flex;
 }
 .sidebar {
-    /* background-color: red; */
+    background-color:white;
     flex: 0.3;
     display: flex;
     flex-direction: column;
 }
-.chatArea-contianer {
+/* .chatArea-container {
     flex: 0.7;
-}
+    height: 100%;
+} */
 .sb-header {
     background-color: white;
     margin: 10px;
@@ -86,29 +87,108 @@
     font-weight: bold;
     color: rgba(0, 0, 0, 0.54);
 }
-.con-timeStamp{
+.con-timeStamp {
     justify-self: flex-end;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .75rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.75rem;
     color: rgba(0, 0, 0, 0.54);
 }
-.con-lastMessage{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: .75rem;
+.con-lastMessage {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.75rem;
 }
 
-.chatarea-container{
+.chatArea-container {
+    flex: 0.7;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
-.chatArea-header{
+.chatArea-header {
     background-color: orange;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    height: 50px;
 }
-.message-container{
-    background-color: aquamarine;
+.message-container {
+    background-color: white;
+    flex: 1;
+    overflow-x: scroll;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.message-container::-webkit-scrollbar{
+    display: none;
+}
+.text-input-area {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
 }
-.text-input-area{
-    background-color: yellow;
+.search-box {
+    width: 100%;
+    outline-width: 0;
+    border: none;
+    margin-left: 10px;
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.54);
+}
+.messageBox {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #63d7b0;
+}
+.self-timeStamp {
+    align-self: flex-end;
+    font-size: 0.75rem;
+    font-weight: lighter;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.self-message-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.welcome-container{
+    flex:0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0,0,0,.54);
+    border-bottom: 5px solid #63d7b0;
+    border-radius: 20px;
+}
+.createGroup-container{
+    flex:.7;
+    align-self: center;
+    padding: 20px 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
 }
