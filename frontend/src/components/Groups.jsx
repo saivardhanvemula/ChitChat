@@ -2,11 +2,11 @@ import { IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import React from "react";
 
-export const Users_Groups = () => {
+export const Groups = () => {
     return (
         <div className="list-container">
             <div className="ug-header">
-                <p className="ug-title">Online Users</p>
+                <p className="ug-title">Online Groups</p>
             </div>
             <div className="sb-search">
                 <IconButton>
@@ -21,27 +21,27 @@ export const Users_Groups = () => {
             <div className="ug-list">
                 <div className="list-tem">
                     <p className="con-icon">T</p>
-                    <p className="con-titile">Test User</p>
+                    <p className="con-titile">Test Group</p>
                 </div>
                 <div className="list-tem">
                     <p className="con-icon">T</p>
-                    <p className="con-titile">Test User</p>
+                    <p className="con-titile">Test Group</p>
                 </div>
                 <div className="list-tem">
                     <p className="con-icon">T</p>
-                    <p className="con-titile">Test User</p>
+                    <p className="con-titile">Test Group</p>
                 </div>
                 <div className="list-tem">
                     <p className="con-icon">T</p>
-                    <p className="con-titile">Test User</p>
+                    <p className="con-titile">Test Group</p>
                 </div>
                 <div className="list-tem">
                     <p className="con-icon">T</p>
-                    <p className="con-titile">Test User</p>
+                    <p className="con-titile">Test Group</p>
                 </div>
                 <div className="list-tem">
                     <p className="con-icon">T</p>
-                    <p className="con-titile">Test User</p>
+                    <p className="con-titile">Test Group</p>
                 </div>
             </div>
         </div>

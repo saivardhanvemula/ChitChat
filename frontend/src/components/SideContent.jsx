@@ -8,6 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
 
 import { ConversationItem } from "./ConversationItem";
+import { useNavigate } from "react-router-dom";
 
 export const Sidebar = () => {
     const [conversations, setconversations] = useState([
@@ -15,6 +16,7 @@ export const Sidebar = () => {
         { name: "Test#1", lastMessage: "Last Message #1", timeStamp: "today" },
         { name: "Test#1", lastMessage: "Last Message #1", timeStamp: "today" },
     ]);
+    const navigate = useNavigate();
     return (
         <div className="sidebar">
             <div className="sb-header">
@@ -24,13 +26,25 @@ export const Sidebar = () => {
                     </IconButton>
                 </div>
                 <div>
-                    <IconButton>
+                    <IconButton
+                        onClick={() => {
+                            navigate("/app/users");
+                        }}
+                    >
                         <PersonAddIcon />
                     </IconButton>
-                    <IconButton>
+                    <IconButton
+                        onClick={() => {
+                            navigate("/app/groups");
+                        }}
+                    >
                         <GroupAddIcon />
                     </IconButton>
-                    <IconButton>
+                    <IconButton
+                        onClick={() => {
+                            navigate("/app/create-group");
+                        }}
+                    >
                         <AddCircleIcon />
                     </IconButton>
                     <IconButton>
@@ -49,9 +63,13 @@ export const Sidebar = () => {
                 />
             </div>
             <div className="sb-conversations">
-            {conversations.map((conversation, index) => (
-                <ConversationItem key={index} props={conversation} />
-            ))}
+                {conversations.map((conversation, index) => (
+                    <ConversationItem
+                        key={index}
+                        props={conversation}
+                        
+                    />
+                ))}
             </div>
         </div>
     );
