@@ -1,12 +1,14 @@
 import './App.css'
 import { MainContainer } from './components/MainContainer'
+import { Login } from './components/Login'
 
 function App() {
 
   return (
     <div className='app'>
       {/* app */}
-      <MainContainer/>
+      {/* <MainContainer/> */}
+      <Login/>
     </div>
   )
 }
