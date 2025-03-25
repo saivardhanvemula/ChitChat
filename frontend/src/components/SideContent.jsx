@@ -48,9 +48,11 @@ export const Sidebar = () => {
                     className="search-box"
                 />
             </div>
+            <div className="sb-conversations">
             {conversations.map((conversation, index) => (
                 <ConversationItem key={index} props={conversation} />
             ))}
+            </div>
         </div>
     );
 };
