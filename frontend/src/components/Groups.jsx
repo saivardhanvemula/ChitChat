@@ -1,24 +1,26 @@
 import { IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import React from "react";
+import { useSelector } from "react-redux";
 
 export const Groups = () => {
+    const lightTheme = useSelector((state) => state.themeKey);
     return (
         <div className="list-container">
-            <div className="ug-header">
+            <div className={"ug-header " + (lightTheme ? " " : " dark")}>
                 <p className="ug-title">Online Groups</p>
             </div>
-            <div className="sb-search">
+            <div className={"sb-search"+ (lightTheme ? " " : " dark")}>
                 <IconButton>
                     <SearchIcon />
                 </IconButton>
                 <input
                     type="text"
                     placeholder="Search"
-                    className="search-box"
+                    className={"search-box"+ (lightTheme ? " " : " dark")}
                 />
             </div>
-            <div className="ug-list">
+            <div className={"ug-list"+ (lightTheme ? " " : " dark")}>
                 <div className="list-tem">
                     <p className="con-icon">T</p>
                     <p className="con-titile">Test Group</p>
