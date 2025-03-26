@@ -300,3 +300,40 @@
 .list-item:active{
     background-color: white;
 }
+.other-icons{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* align-items: space-around; */
+    justify-content: space-around;
+    /* align-items: center; */
+}
+@media only screen and (max-width:40em){
+    .sb-search{
+        display: none;
+    }
+    .sb-conversations{
+        display: none;
+    }
+    .sb-header{
+        flex-direction: column;
+        flex-grow: 1;
+        width: min-content;
+    }
+    .other-icons{
+        flex-direction: column;
+    }
+    .chatArea-container{
+        flex-grow: 1;
+    }
+    .sidebar{
+        flex-grow: 0;
+    }
+    .MainContainer{
+        width: 100vw;
+        height: 100vh;
+    }
+    .list-container{
+        flex-grow: 1;
+    }
+}

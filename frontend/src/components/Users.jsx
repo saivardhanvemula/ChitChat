@@ -4,7 +4,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export const Users = () => {
-    const lightTheme=useSelector((state)=>state.themKey)
+    const lightTheme = useSelector((state) => state.themeKey);
     return (
         <div className="list-container">
             <div className={"ug-header"+ (lightTheme ? " " : " dark")}>

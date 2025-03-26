@@ -26,58 +26,68 @@ export const Sidebar = () => {
     return (
         <div className="sidebar">
             <div className={"sb-header" + (lightTheme ? " " : " dark")}>
-                <div>
-                    <IconButton>
-                        <AccountCircleIcon
-                            className={"icon" + (lightTheme ? " " : " dark")}
-                        />
-                    </IconButton>
-                </div>
-                <div>
-                    <IconButton
-                        onClick={() => {
-                            navigate("/app/users");
-                        }}
-                    >
-                        <PersonAddIcon
-                            className={"icon" + (lightTheme ? " " : " dark")}
-                        />
-                    </IconButton>
-                    <IconButton
-                        onClick={() => {
-                            navigate("/app/groups");
-                        }}
-                    >
-                        <GroupAddIcon
-                            className={"icon" + (lightTheme ? " " : " dark")}
-                        />
-                    </IconButton>
-                    <IconButton
-                        onClick={() => {
-                            navigate("/app/create-group");
-                        }}
-                    >
-                        <AddCircleIcon
-                            className={"icon" + (lightTheme ? " " : " dark")}
-                        />
-                    </IconButton>
-                    <IconButton onClick={() => {dispatch(toggleTheme())}}>
-                        {lightTheme && (
-                            <NightlightIcon
+                    <div className="other-icons">
+                        <IconButton>
+                            <AccountCircleIcon
                                 className={
                                     "icon" + (lightTheme ? " " : " dark")
                                 }
                             />
-                        )}
-                        {!lightTheme && (
-                            <LightModeIcon
+                        </IconButton>
+                        <IconButton
+                            onClick={() => {
+                                navigate("/app/users");
+                            }}
+                        >
+                            <PersonAddIcon
                                 className={
                                     "icon" + (lightTheme ? " " : " dark")
                                 }
                             />
-                        )}
-                    </IconButton>
-                </div>
+                        </IconButton>
+                        <IconButton
+                            onClick={() => {
+                                navigate("/app/groups");
+                            }}
+                        >
+                            <GroupAddIcon
+                                className={
+                                    "icon" + (lightTheme ? " " : " dark")
+                                }
+                            />
+                        </IconButton>
+                        <IconButton
+                            onClick={() => {
+                                navigate("/app/create-group");
+                            }}
+                        >
+                            <AddCircleIcon
+                                className={
+                                    "icon" + (lightTheme ? " " : " dark")
+                                }
+                            />
+                        </IconButton>
+                        <IconButton
+                            onClick={() => {
+                                dispatch(toggleTheme());
+                            }}
+                        >
+                            {lightTheme && (
+                                <NightlightIcon
+                                    className={
+                                        "icon" + (lightTheme ? " " : " dark")
+                                    }
+                                />
+                            )}
+                            {!lightTheme && (
+                                <LightModeIcon
+                                    className={
+                                        "icon" + (lightTheme ? " " : " dark")
+                                    }
+                                />
+                            )}
+                        </IconButton>
+                    </div>
             </div>
             <div className={"sb-search" + (lightTheme ? " " : " dark")}>
                 <IconButton>
